@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "momilk:salt_ore",
+    "momilk:deepslate_salt_ore",
+    "momilk:briny_tube_coral_block",
+    "momilk:briny_bubble_coral_block",
+    "momilk:briny_brain_coral_block",
+    "momilk:briny_fire_coral_block",
+    "momilk:briny_horn_coral_block"
+  ]
+}

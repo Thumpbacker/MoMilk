@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:phantom_membrane",
+    "momilk:salt"
+  ],
+  "result": {
+    "id": "momilk:floating_salt",
+    "count": 1
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:apple",
+    "minecraft:glass_bottle",
+    "minecraft:sugar",
+    "#momilk:cinnamon_sticks"
+  ],
+  "result": {
+    "id": "momilk:apple_cider",
+    "count": 1
+  }
+}

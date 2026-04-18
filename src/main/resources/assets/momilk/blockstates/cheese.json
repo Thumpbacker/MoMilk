@@ -1,0 +1,32 @@
+{
+  "variants": {
+    "bites=0": {
+      "model": "momilk:block/cheese"
+    },
+    "bites=1": {
+      "model": "momilk:block/cheese_bite1"
+    },
+    "bites=2": {
+      "model": "momilk:block/cheese_bite2"
+    },
+    "bites=3": {
+      "model": "momilk:block/cheese_bite3"
+    },
+    "facing=south,bites=1": {
+      "model": "momilk:block/cheese_bite1",
+      "y": 90
+    },
+    "facing=west,bites=1": {
+      "model": "momilk:block/cheese_bite1",
+      "y": 180
+    },
+    "facing=west,bites=2": {
+      "model": "momilk:block/cheese_bite2",
+      "y": 180
+    },
+    "facing=west,bites=3": {
+      "model": "momilk:block/cheese_bite3",
+      "y": 180
+    }
+  }
+}

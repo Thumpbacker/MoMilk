@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "get_salt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "momilk:salt",
+              "minecraft:glistering_melon_slice"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_salt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "momilk:rejuvenating_salt"
+    ]
+  }
+}

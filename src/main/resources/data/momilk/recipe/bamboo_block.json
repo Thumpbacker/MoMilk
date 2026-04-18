@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " / ",
+        "/S/",
+        " / "
+    ],
+    "key": {
+        "/": "minecraft:bamboo",
+        "S": "minecraft:stripped_bamboo_block"
+    },
+    "result": {
+        "id": "minecraft:bamboo_block",
+        "count": 1
+    },
+    "group": "logs"
+}

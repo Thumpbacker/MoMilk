@@ -1,0 +1,13 @@
+{
+	"required": true,
+	"package": "com.momilk.mixin.client",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"ExampleClientMixin",
+		"CowMixin",
+		"GoatMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

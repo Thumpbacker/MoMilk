@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "group": "salt",
+    "ingredients": [
+        "momilk:salt_block"
+    ],
+    "result": {
+        "id": "momilk:salt",
+        "count": 9
+    }
+}

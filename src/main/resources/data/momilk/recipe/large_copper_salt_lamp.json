@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "copper_salt_lamp",
+    "pattern": [
+        "#",
+        "T"
+    ],
+    "key": {
+        "#": "momilk:large_salt_block",
+        "T": "minecraft:copper_torch"
+    },
+    "result": {
+        "id": "momilk:large_copper_salt_lamp",
+        "count": 1
+    }
+}

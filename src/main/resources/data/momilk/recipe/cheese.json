@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:salt",
+    "momilk:apple_cider",
+    "momilk:spoiled_milk_bucket"
+  ],
+  "result": {
+    "id": "momilk:cheese",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "soul_salt_lamp",
+    "pattern": [
+        "#",
+        "T"
+    ],
+    "key": {
+        "#": "momilk:medium_salt_block",
+        "T": "minecraft:soul_torch"
+    },
+    "result": {
+        "id": "momilk:medium_soul_salt_lamp",
+        "count": 1
+    }
+}

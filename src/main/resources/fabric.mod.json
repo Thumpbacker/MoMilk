@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "momilk",
+	"version": "${version}",
+	"name": "MoMilk",
+	"description": "A mod that adds more uses to Milk, plus other things",
+	"authors": [
+		"Thumpbacker"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/momilk/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.momilk.MoMilk"
+		],
+		"client": [
+			"com.momilk.MoMilkClient"
+		],
+		"fabric-datagen": [
+			"com.momilk.MoMilkDataGenerator"
+		]
+	},
+	"mixins": [
+		"momilk.mixins.json",
+		{
+			"config": "momilk.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~26.1-",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

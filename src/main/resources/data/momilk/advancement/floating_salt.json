@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "get_salt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "momilk:salt",
+              "minecraft:phantom_membrane"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_salt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "momilk:floating_salt"
+    ]
+  }
+}

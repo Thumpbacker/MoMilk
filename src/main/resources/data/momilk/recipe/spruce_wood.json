@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " / ",
+        "/S/",
+        " / "
+    ],
+    "key": {
+        "/": "momilk:cinnamon_stick",
+        "S": "minecraft:stripped_spruce_wood"
+    },
+    "result": {
+        "id": "minecraft:spruce_wood",
+        "count": 1
+    },
+    "group": "woods"
+}

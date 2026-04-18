@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "all_effects": {
+      "conditions": {
+        "effects": {
+          "momilk:drowning": {}
+        }
+      },
+      "trigger": "minecraft:effects_changed"
+    }
+  },
+  "requirements": [
+    [
+      "all_effects"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "momilk:suspicious_milk_from_drowning_items"
+    ]
+  }
+}

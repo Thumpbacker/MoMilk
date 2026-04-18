@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " / ",
+        "/S/",
+        " / "
+    ],
+    "key": {
+        "/": "momilk:hyphae_stick",
+        "S": "minecraft:stripped_warped_stem"
+    },
+    "result": {
+        "id": "minecraft:warped_stem",
+        "count": 1
+    },
+    "group": "logs"
+}

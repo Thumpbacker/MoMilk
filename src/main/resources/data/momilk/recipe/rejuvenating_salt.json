@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:glistering_melon_slice",
+    "momilk:salt"
+  ],
+  "result": {
+    "id": "momilk:rejuvenating_salt",
+    "count": 1
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "get_salt": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "momilk:salt_block"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_salt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "momilk:salt_lamp",
+      "momilk:soul_salt_lamp",
+      "momilk:redstone_salt_lamp",
+      "momilk:copper_salt_lamp"
+    ]
+  }
+}

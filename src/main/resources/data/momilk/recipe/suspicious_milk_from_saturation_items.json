@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "suspicious_milk",
+  "ingredients": [
+    "momilk:milk_bottle",
+    "minecraft:brown_mushroom",
+    "minecraft:red_mushroom",
+    "#momilk:suspicious_effect_saturation"
+  ],
+  "result": {
+    "components": {
+      "minecraft:suspicious_stew_effects": [
+        {
+          "duration": 220,
+          "id": "minecraft:saturation"
+        }
+      ]
+    },
+    "id": "momilk:suspicious_milk"
+  }
+}

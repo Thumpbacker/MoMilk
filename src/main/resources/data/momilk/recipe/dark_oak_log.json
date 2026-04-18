@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " / ",
+        "/S/",
+        " / "
+    ],
+    "key": {
+        "/": "momilk:cinnamon_stick",
+        "S": "minecraft:stripped_dark_oak_log"
+    },
+    "result": {
+        "id": "minecraft:dark_oak_log",
+        "count": 1
+    },
+    "group": "logs"
+}

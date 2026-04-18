@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "momilk:salt_block",
+    "momilk:medium_salt_block",
+    "momilk:large_salt_block",
+    "momilk:salt_lamp",
+    "momilk:medium_salt_lamp",
+    "momilk:large_salt_lamp",
+    "momilk:soul_salt_lamp",
+    "momilk:medium_soul_salt_lamp",
+    "momilk:large_soul_salt_lamp",
+    "momilk:copper_salt_lamp",
+    "momilk:medium_copper_salt_lamp",
+    "momilk:large_copper_salt_lamp",
+    "momilk:redstone_salt_lamp",
+    "momilk:medium_redstone_salt_lamp",
+    "momilk:large_redstone_salt_lamp"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "redstone_salt_lamp",
+    "pattern": [
+        "#",
+        "T"
+    ],
+    "key": {
+        "#": "momilk:salt_block",
+        "T": "minecraft:redstone_torch"
+    },
+    "result": {
+        "id": "momilk:redstone_salt_lamp",
+        "count": 1
+    }
+}

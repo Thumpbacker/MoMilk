@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " / ",
+        "/S/",
+        " / "
+    ],
+    "key": {
+        "/": "momilk:hyphae_stick",
+        "S": "minecraft:stripped_crimson_hyphae"
+    },
+    "result": {
+        "id": "minecraft:crimson_hyphae",
+        "count": 1
+    },
+    "group": "woods"
+}

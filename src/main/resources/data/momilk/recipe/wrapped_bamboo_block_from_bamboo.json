@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " / ",
+        "/S/",
+        " / "
+    ],
+    "key": {
+        "/": "minecraft:bamboo",
+        "S": "momilk:stripped_wrapped_bamboo_block"
+    },
+    "result": {
+        "id": "momilk:wrapped_bamboo_block",
+        "count": 1
+    },
+    "group": "woods"
+}
