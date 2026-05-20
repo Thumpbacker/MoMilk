@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "have_milk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "momilk:hog_milk_bucket"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have_milk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "momilk:spoiled_hog_milk_bucket",
+      "momilk:spoiled_hog_milk_from_campfire",
+      "momilk:spoiled_hog_milk_from_smoker"
+    ]
+  }
+}

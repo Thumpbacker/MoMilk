@@ -23,8 +23,10 @@ public class ModPotions {
     public static final Holder<Potion> OXYGEN_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "oxygen"), new Potion("oxygen", new MobEffectInstance(ModEffects.OXYGEN, 3600)));
     public static final Holder<Potion> STRONG_OXYGEN_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "strong_oxygen"), new Potion("oxygen", new MobEffectInstance(ModEffects.OXYGEN, 1800, 1)));
     public static final Holder<Potion> LONG_OXYGEN_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "long_oxygen"), new Potion("oxygen", new MobEffectInstance(ModEffects.OXYGEN, 9600)));
-    public static final Holder<Potion> MELON_MASTER_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "melon_master"), new Potion("melon_master", new MobEffectInstance(ModEffects.OXYGEN, 3600), new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1)));
-    public static final Holder<Potion> LONG_MELON_MASTER_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "long_melon_master_master"), new Potion("melon_master", new MobEffectInstance(ModEffects.OXYGEN, 3600), new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1)));
+    public static final Holder<Potion> MELON_MASTER_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "melon_master"), new Potion("melon_master", new MobEffectInstance(ModEffects.OXYGEN, 1800), new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1)));
+    public static final Holder<Potion> LONG_MELON_MASTER_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "long_melon_master_master"), new Potion("melon_master", new MobEffectInstance(ModEffects.OXYGEN, 9600), new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1)));
+    public static final Holder<Potion> GLOWING_MASTER_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "glowing_master"), new Potion("glowing_master", new MobEffectInstance(ModEffects.OXYGEN, 1800), new MobEffectInstance(MobEffects.GLOWING, 1800 / 2), new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1)));
+    public static final Holder<Potion> LONG_GLOWING_MASTER_POTION = Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, "long_glowing_master"), new Potion("glowing_master", new MobEffectInstance(ModEffects.OXYGEN, 3600), new MobEffectInstance(MobEffects.GLOWING, 1800), new MobEffectInstance(MobEffects.INSTANT_HEALTH, 1)));
 
     public static void register()
     {
@@ -40,5 +42,7 @@ public class ModPotions {
         FabricPotionBrewingBuilder.BUILD.register(builder -> {builder.addMix(ModPotions.OXYGEN_POTION, Items.REDSTONE, LONG_OXYGEN_POTION);});
         FabricPotionBrewingBuilder.BUILD.register(builder -> {builder.addMix(Potions.AWKWARD, ModItems.REJUVENATING_SALT, MELON_MASTER_POTION);});
         FabricPotionBrewingBuilder.BUILD.register(builder -> {builder.addMix(ModPotions.MELON_MASTER_POTION, Items.REDSTONE, LONG_MELON_MASTER_POTION);});
+        FabricPotionBrewingBuilder.BUILD.register(builder -> {builder.addMix(Potions.AWKWARD, ModItems.GLOWING_SALT, GLOWING_MASTER_POTION);});
+        FabricPotionBrewingBuilder.BUILD.register(builder -> {builder.addMix(ModPotions.LONG_GLOWING_MASTER_POTION, Items.REDSTONE, LONG_GLOWING_MASTER_POTION);});
     }
 }

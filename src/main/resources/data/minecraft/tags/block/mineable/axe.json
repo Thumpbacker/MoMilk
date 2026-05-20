@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "momilk:wrapped_bamboo_block",
-    "momilk:stripped_wrapped_bamboo_block"
+    "momilk:stripped_wrapped_bamboo_block",
+    "momilk:cinnamon_stick_bale",
+    "momilk:hyphae_stick_bale"
   ]
 }

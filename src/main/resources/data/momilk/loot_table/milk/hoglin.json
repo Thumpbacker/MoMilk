@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:entity_interact",
+  "pools": [
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "momilk:hog_milk_bucket",
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "items": "minecraft:bucket"
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1,
+      "functions": [],
+      "conditions": []
+    },
+    {
+      "bonus_rolls": 0,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "momilk:hog_milk_bottle",
+          "conditions": [
+            {
+              "condition": "minecraft:match_tool",
+              "predicate": {
+                "items": "minecraft:glass_bottle"
+              }
+            }
+          ]
+        }
+      ],
+      "rolls": 1,
+      "functions": [],
+      "conditions": []
+    }
+  ]
+}

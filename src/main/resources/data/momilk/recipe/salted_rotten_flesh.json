@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:salt",
+    "minecraft:rotten_flesh"
+  ],
+  "result": {
+    "id": "momilk:salted_rotten_flesh",
+    "count": 1
+  }
+}

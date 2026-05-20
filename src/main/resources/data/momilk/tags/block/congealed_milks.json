@@ -1,0 +1,12 @@
+{
+  "values": [
+    "momilk:congealed_milk",
+    "momilk:congealed_chocolate_milk",
+    "momilk:congealed_spoiled_milk",
+    "momilk:congealed_hog_milk",
+    "momilk:congealed_spoiled_hog_milk",
+    "momilk:congealed_hot_chocolate",
+    "momilk:congealed_cereal",
+    "momilk:congealed_spoiled_cereal"
+  ]
+}

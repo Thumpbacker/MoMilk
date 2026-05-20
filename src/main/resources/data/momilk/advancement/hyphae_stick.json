@@ -1,0 +1,27 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "have_milk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "momilk:hyphae_stick_bale"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have_milk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "momilk:hyphae_stick"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        "momilk:milk_bottle",
+        "minecraft:wheat"
+    ],
+    "result": {
+        "id": "momilk:cereal_bottle",
+        "count": 1
+    }
+}

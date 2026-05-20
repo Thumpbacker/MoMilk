@@ -1,6 +1,7 @@
 package com.momilk.block;
 
 import com.mojang.serialization.MapCodec;
+import com.momilk.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -91,10 +92,9 @@ public class SaltLayerBlock extends FallingBlock implements SimpleWaterloggedBlo
 
     @Override
     protected void entityInside(BlockState state, Level level, BlockPos pos, Entity entity, InsideBlockEffectApplier effectApplier, boolean isPrecise) {
-
         if(harmful) {
-            if (entity.is(EntityType.SLIME) || entity.is(EntityType.FROG) || entity.is(EntityType.AXOLOTL) || entity.is(EntityType.TADPOLE)) {
-                entity.lavaHurt();
+            if (entity.is(ModTags.EntityTypes.HURT_BY_SALT)) {
+                entity.hurt(level.damageSources().dryOut(), 1f);
             }
         }
     }

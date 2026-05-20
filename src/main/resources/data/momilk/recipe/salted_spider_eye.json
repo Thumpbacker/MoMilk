@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:salt",
+    "minecraft:spider_eye"
+  ],
+  "result": {
+    "id": "momilk:salted_spider_eye",
+    "count": 1
+  }
+}

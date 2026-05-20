@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "have_milk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "momilk:cereal"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have_milk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "momilk:spoiled_cereal",
+      "momilk:spoiled_cereal_from_campfire",
+      "momilk:spoiled_cereal_from_smoker"
+    ]
+  }
+}

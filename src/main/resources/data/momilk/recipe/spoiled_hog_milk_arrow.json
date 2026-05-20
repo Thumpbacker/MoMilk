@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "AAA",
+    "ABA",
+    "AAA"
+  ],
+  "key": {
+    "B": "momilk:spoiled_hog_milk_bucket",
+    "A": "minecraft:arrow"
+  },
+  "result": {
+    "count": 8,
+    "id": "momilk:spoiled_hog_milk_arrow"
+  }
+}

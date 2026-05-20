@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "have_milk": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "momilk:hot_chocolate"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "have_milk"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "momilk:hot_chocolate_arrow",
+      "momilk:hot_chocolate_arrow_from_smelting"
+    ]
+  }
+}

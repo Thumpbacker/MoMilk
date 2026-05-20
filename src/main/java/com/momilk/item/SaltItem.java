@@ -4,6 +4,7 @@ import com.google.common.base.Suppliers;
 import com.google.common.collect.BiMap;
 import com.google.common.collect.ImmutableBiMap;
 import com.momilk.block.ModBlocks;
+import com.momilk.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.*;
 import net.minecraft.sounds.SoundEvents;

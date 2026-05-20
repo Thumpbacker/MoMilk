@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:campfire_cooking",
+    "ingredient": "momilk:cereal",
+    "result": {
+        "id": "momilk:spoiled_cereal"
+    },
+    "experience": 0.1,
+    "cookingtime": 200
+}

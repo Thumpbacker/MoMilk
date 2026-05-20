@@ -4,8 +4,7 @@
 	"compatibilityLevel": "JAVA_25",
 	"client": [
 		"ExampleClientMixin",
-		"CowMixin",
-		"GoatMixin"
+		"WallBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

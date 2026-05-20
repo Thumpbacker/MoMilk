@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#B#",
+    " # "
+  ],
+  "key": {
+    "#": "minecraft:wheat",
+    "B": "momilk:congealed_milk"
+  },
+  "group": "congealed_cereal",
+  "result": {
+    "id": "momilk:congealed_cereal"
+  }
+}

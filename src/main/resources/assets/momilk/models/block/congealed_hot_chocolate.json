@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "momilk:block/congealed_hot_chocolate"
+  }
+}

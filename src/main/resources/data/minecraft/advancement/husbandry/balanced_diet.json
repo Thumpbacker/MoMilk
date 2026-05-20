@@ -340,7 +340,103 @@
     "hyphae_stick": {
       "conditions": {
         "item": {
-          "items": "minecraft:hyphae_stick"
+          "items": "momilk:hyphae_stick"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "hot_chocolate": {
+      "conditions": {
+        "item": {
+          "items": "momilk:hot_chocolate"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "cereal": {
+      "conditions": {
+        "item": {
+          "items": "momilk:cereal"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "spoiled_cereal": {
+      "conditions": {
+        "item": {
+          "items": "momilk:spoiled_cereal"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "hot_chocolate_bottle": {
+      "conditions": {
+        "item": {
+          "items": "momilk:hot_chocolate_bottle"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "cereal_bottle": {
+      "conditions": {
+        "item": {
+          "items": "momilk:cereal_bottle"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "spoiled_cereal_bottle": {
+      "conditions": {
+        "item": {
+          "items": "momilk:spoiled_cereal_bottle"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "salted_cod": {
+      "conditions": {
+        "item": {
+          "items": "momilk:salted_cod"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "salted_salmon": {
+      "conditions": {
+        "item": {
+          "items": "momilk:salted_salmon"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "salted_tropical_fish": {
+      "conditions": {
+        "item": {
+          "items": "momilk:salted_tropical_fish"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "salted_potato": {
+      "conditions": {
+        "item": {
+          "items": "momilk:salted_potato"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "salted_spider_eye": {
+      "conditions": {
+        "item": {
+          "items": "momilk:salted_spider_eye"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "salted_rotten_flesh": {
+      "conditions": {
+        "item": {
+          "items": "momilk:salted_rotten_flesh"
         }
       },
       "trigger": "minecraft:consume_item"
@@ -488,6 +584,42 @@
     ],
     [
       "hyphae_stick"
+    ],
+    [
+      "hot_chocolate"
+    ],
+    [
+      "cereal"
+    ],
+    [
+      "spoiled_cereal"
+    ],
+    [
+      "hot_chocolate_bottle"
+    ],
+    [
+      "cereal_bottle"
+    ],
+    [
+      "spoiled_cereal_bottle"
+    ],
+    [
+      "salted_cod"
+    ],
+    [
+      "salted_potato"
+    ],
+    [
+      "salted_salmon"
+    ],
+    [
+      "salted_tropical_fish"
+    ],
+    [
+      "salted_rotten_flesh"
+    ],
+    [
+      "salted_spider_eye"
     ]
   ],
   "rewards": {

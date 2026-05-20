@@ -1,27 +1,18 @@
 package com.momilk;
 
 import com.momilk.block.BlockCallbackEvents;
+import com.momilk.block.ModFlameableBlocks;
 import com.momilk.block.ModBlocks;
 import com.momilk.dispenser_actions.DispenserModRegistry;
 import com.momilk.effects.ModEffects;
 import com.momilk.effects.ModPotions;
 import com.momilk.entity.ModEntityTypes;
+import com.momilk.entity.UseEntityCallbackEvents;
+import com.momilk.item.ModCompostables;
+import com.momilk.item.ModFuelItems;
 import com.momilk.item.ModItems;
 import com.momilk.ui.ModCreativeInventory;
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.player.UseBlockCallback;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.component.SuspiciousStewEffects;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.DispenserBlock;
-import net.minecraft.world.level.block.state.BlockState;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -40,11 +31,15 @@ public class MoMilk implements ModInitializer {
 		// Proceed with mild caution.
 		ModItems.initialize();
 		ModEntityTypes.registerModEntityTypes();
-		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, ModCreativeInventory.MO_MILK_TAB_KEY, ModCreativeInventory.MO_MILK_TAB);
+		ModCreativeInventory.register();
 		DispenserModRegistry.register();
 		BlockCallbackEvents.register();
 		ModEffects.register();
 		ModPotions.register();
 		ModBlocks.initialize();
+		UseEntityCallbackEvents.register();
+		ModCompostables.initialize();
+		ModFuelItems.initialize();
+		ModFlameableBlocks.initialize();
 	}
 }

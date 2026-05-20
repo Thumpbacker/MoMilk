@@ -16,7 +16,6 @@ import net.minecraft.world.item.StandingAndWallBlockItem;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -41,11 +40,33 @@ public class ModItems {
     public static final Item SALT = register("salt", createSaltItemWithCustomItemName(ModBlocks.SALT_LAYER), new Item.Properties().food(ModFoods.SALT, ModConsumables.SALT));
     public static final Item FLOATING_SALT = register("floating_salt", createBlockItemWithCustomItemName(ModBlocks.FLOATING_SALT_LAYER), new Item.Properties());
     public static final Item REJUVENATING_SALT = register("rejuvenating_salt", createBlockItemWithCustomItemName(ModBlocks.REJUVENATING_SALT_LAYER), new Item.Properties());
+    public static final Item GLOWING_SALT = register("glowing_salt", createBlockItemWithCustomItemName(ModBlocks.GLOWING_SALT_LAYER), new Item.Properties());
     public static final Item BRINY_TUBE_CORAL_FAN = register("briny_tube_coral_fan", createWallBlockItem(ModBlocks.BRINY_TUBE_CORAL_FAN, ModBlocks.BRINY_TUBE_CORAL_WALL_FAN), new Item.Properties());
     public static final Item BRINY_BUBBLE_CORAL_FAN = register("briny_bubble_coral_fan", createWallBlockItem(ModBlocks.BRINY_BUBBLE_CORAL_FAN, ModBlocks.BRINY_BUBBLE_CORAL_WALL_FAN), new Item.Properties());
     public static final Item BRINY_HORN_CORAL_FAN = register("briny_horn_coral_fan", createWallBlockItem(ModBlocks.BRINY_HORN_CORAL_FAN, ModBlocks.BRINY_HORN_CORAL_WALL_FAN), new Item.Properties());
     public static final Item BRINY_BRAIN_CORAL_FAN = register("briny_brain_coral_fan", createWallBlockItem(ModBlocks.BRINY_BRAIN_CORAL_FAN, ModBlocks.BRINY_BRAIN_CORAL_WALL_FAN), new Item.Properties());
     public static final Item BRINY_FIRE_CORAL_FAN = register("briny_fire_coral_fan", createWallBlockItem(ModBlocks.BRINY_FIRE_CORAL_FAN, ModBlocks.BRINY_FIRE_CORAL_WALL_FAN), new Item.Properties());
+    public static final Item HOT_CHOCOLATE = register("hot_chocolate", Item::new ,new Item.Properties().food(ModFoods.HOT_CHOCOLATE, ModConsumables.HOT_CHOCOLATE).stacksTo(1).craftRemainder(BUCKET).usingConvertsTo(BUCKET));
+    public static final Item CEREAL = register("cereal", Item::new ,new Item.Properties().food(ModFoods.CEREAL).usingConvertsTo(BUCKET).stacksTo(1).craftRemainder(BUCKET));
+    public static final Item CEREAL_BOTTLE = register("cereal_bottle", Item::new ,new Item.Properties().food(ModFoods.CEREAL_BOTTLE).usingConvertsTo(GLASS_BOTTLE).stacksTo(16).craftRemainder(GLASS_BOTTLE));
+    public static final Item CEREAL_ARROW = register("cereal_arrow", CerealArrowItem::new, new Item.Properties());
+    public static final Item HOT_CHOCOLATE_BOTTLE = register("hot_chocolate_bottle", Item::new ,new Item.Properties().food(ModFoods.HOT_CHOCOLATE_BOTTLE, ModConsumables.HOT_CHOCOLATE_BOTTLE).stacksTo(16).usingConvertsTo(GLASS_BOTTLE).craftRemainder(GLASS_BOTTLE));
+    public static final Item HOT_CHOCOLATE_ARROW = register("hot_chocolate_arrow", HotChocolateArrowItem::new, new Item.Properties());
+    public static final Item SPOILED_CEREAL = register("spoiled_cereal", Item::new ,new Item.Properties().food(ModFoods.SPOILED_CEREAL).usingConvertsTo(BUCKET).stacksTo(1).craftRemainder(BUCKET));
+    public static final Item SPOILED_CEREAL_BOTTLE = register("spoiled_cereal_bottle", Item::new ,new Item.Properties().food(ModFoods.SPOILED_CEREAL_BOTTLE).usingConvertsTo(GLASS_BOTTLE).stacksTo(16).craftRemainder(GLASS_BOTTLE));
+    public static final Item SPOILED_CEREAL_ARROW = register("spoiled_cereal_arrow", SpoiledCerealArrowItem::new, new Item.Properties());
+    public static final Item HOG_MILK_BUCKET = register("hog_milk_bucket", Item::new ,new Item.Properties().component(DataComponents.CONSUMABLE, ModConsumables.HOG_MILK).usingConvertsTo(BUCKET).stacksTo(1).craftRemainder(BUCKET));
+    public static final Item HOG_MILK_BOTTLE = register("hog_milk_bottle", Item::new ,new Item.Properties().component(DataComponents.CONSUMABLE, ModConsumables.HOG_MILK_BOTTLE).usingConvertsTo(GLASS_BOTTLE).stacksTo(16).craftRemainder(GLASS_BOTTLE));
+    public static final Item HOG_MILK_ARROW = register("hog_milk_arrow", HogMilkArrowItem::new, new Item.Properties());
+    public static final Item SPOILED_HOG_MILK_BUCKET = register("spoiled_hog_milk_bucket", Item::new ,new Item.Properties().component(DataComponents.CONSUMABLE, ModConsumables.SPOILED_HOG_MILK_BUCKET).usingConvertsTo(BUCKET).stacksTo(1).craftRemainder(BUCKET));
+    public static final Item SPOILED_HOG_MILK_BOTTLE = register("spoiled_hog_milk_bottle", Item::new ,new Item.Properties().component(DataComponents.CONSUMABLE, ModConsumables.SPOILED_HOG_MILK_BOTTLE).usingConvertsTo(GLASS_BOTTLE).stacksTo(16).craftRemainder(GLASS_BOTTLE));
+    public static final Item SPOILED_HOG_MILK_ARROW = register("spoiled_hog_milk_arrow", SpoiledHogMilkArrowItem::new, new Item.Properties());
+    public static final Item SALTED_COD = register("salted_cod", Item::new ,new Item.Properties().food(ModFoods.SALTED_COD));
+    public static final Item SALTED_SALMON = register("salted_salmon", Item::new ,new Item.Properties().food(ModFoods.SALTED_SALMON));
+    public static final Item SALTED_TROPICAL_FISH = register("salted_tropical_fish", Item::new ,new Item.Properties().food(ModFoods.SALTED_TROPICAL_FISH));
+    public static final Item SALTED_POTATO = register("salted_potato", Item::new ,new Item.Properties().food(ModFoods.SALTED_POTATO));
+    public static final Item SALTED_ROTTEN_FLESH = register("salted_rotten_flesh", Item::new ,new Item.Properties().food(Foods.ROTTEN_FLESH, ModConsumables.SALTED_ROTTEN_FLESH));
+    public static final Item SALTED_SPIDER_EYE = register("salted_spider_eye", Item::new ,new Item.Properties().food(Foods.SPIDER_EYE, ModConsumables.SALTED_SPIDER_EYE));
 
     public static <T extends Item> T register(String name, Function<Item.Properties, T> itemFactory, Item.Properties settings) {
         // Create the item key.

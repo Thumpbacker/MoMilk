@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": "momilk:hyphae_stick"
+    },
+    "result": {
+        "id": "momilk:hyphae_stick_bale",
+        "count": 1
+    }
+}

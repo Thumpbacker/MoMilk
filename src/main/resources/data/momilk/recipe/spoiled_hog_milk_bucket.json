@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": "momilk:hog_milk_bucket",
+    "result": {
+        "id": "momilk:spoiled_hog_milk_bucket"
+    },
+    "experience": 0.1,
+    "cookingtime": 200
+}

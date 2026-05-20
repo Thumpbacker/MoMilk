@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "momilk:block/hyphae_stick_bale_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "momilk:block/hyphae_stick_bale"
+    },
+    "axis=z": {
+      "model": "momilk:block/hyphae_stick_bale_horizontal",
+      "x": 90
+    }
+  }
+}

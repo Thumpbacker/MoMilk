@@ -30,6 +30,36 @@ public class ModEntityTypes {
                     .sized(0.75f, 1.75f)
     );
 
+    public static final EntityType<CerealArrow> CEREAL_ARROW = register(
+            "cereal_arrow",
+            EntityType.Builder.<CerealArrow>of(CerealArrow::new, MobCategory.MISC)
+                    .sized(0.75f, 1.75f)
+    );
+
+    public static final EntityType<HotChocolateArrow> HOT_CHOCOLATE_ARROW = register(
+            "hot_chocolate_arrow",
+            EntityType.Builder.<HotChocolateArrow>of(HotChocolateArrow::new, MobCategory.MISC)
+                    .sized(0.75f, 1.75f)
+    );
+
+    public static final EntityType<SpoiledCerealArrow> SPOILED_CEREAL_ARROW = register(
+            "spoiled_cereal_arrow",
+            EntityType.Builder.<SpoiledCerealArrow>of(SpoiledCerealArrow::new, MobCategory.MISC)
+                    .sized(0.75f, 1.75f)
+    );
+
+    public static final EntityType<HogMilkArrow> HOG_MILK_ARROW = register(
+            "hog_milk_arrow",
+            EntityType.Builder.<HogMilkArrow>of(HogMilkArrow::new, MobCategory.MISC)
+                    .sized(0.75f, 1.75f)
+    );
+
+    public static final EntityType<SpoiledHogMilkArrow> SPOILED_HOG_MILK_ARROW = register(
+            "spoiled_hog_milk_arrow",
+            EntityType.Builder.<SpoiledHogMilkArrow>of(SpoiledHogMilkArrow::new, MobCategory.MISC)
+                    .sized(0.75f, 1.75f)
+    );
+
     private static <T extends Entity> EntityType<T> register(String name, EntityType.Builder<T> builder) {
         ResourceKey<EntityType<?>> key = ResourceKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath(MoMilk.MOD_ID, name));
         return Registry.register(BuiltInRegistries.ENTITY_TYPE, key, builder.build(key));

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:salt",
+    "minecraft:tropical_fish"
+  ],
+  "result": {
+    "id": "momilk:salted_tropical_fish",
+    "count": 1
+  }
+}

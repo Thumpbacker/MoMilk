@@ -21,8 +21,8 @@
           "minecraft:weakness": {},
           "minecraft:weaving": {},
           "minecraft:wind_charged": {},
-          "minecraft:drowning": {},
-          "minecraft:oxygen": {}
+          "momilk:drowning": {},
+          "momilk:oxygen": {}
         }
       },
       "trigger": "minecraft:effects_changed"

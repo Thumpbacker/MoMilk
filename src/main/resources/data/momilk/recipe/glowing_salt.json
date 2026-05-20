@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:rejuvenating_salt",
+    "minecraft:glowstone_dust"
+  ],
+  "result": {
+    "id": "momilk:glowing_salt",
+    "count": 1
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:salt",
+    "minecraft:baked_potato"
+  ],
+  "result": {
+    "id": "momilk:salted_potato",
+    "count": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "momilk:block/cinnamon_stick_bale_top",
+    "side": "momilk:block/cinnamon_stick_bale_side"
+  }
+}
