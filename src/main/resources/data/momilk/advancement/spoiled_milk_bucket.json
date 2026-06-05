@@ -12,18 +12,23 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:spoiled_milk_bucket"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "have_milk"
+      "have_milk",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "momilk:spoiled_milk_bucket",
-      "momilk:spoiled_milk_bucket_from_smoker",
-      "momilk:spoiled_milk_bucket_from_campfire"
+      "momilk:spoiled_milk_bucket"
     ]
   }
 }

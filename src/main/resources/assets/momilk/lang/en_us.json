@@ -108,5 +108,6 @@
   "item.momilk.salted_spider_eye": "Salted Spider Eye",
   "item.momilk.salted_rotten_flesh": "Salted Rotten Flesh",
   "block.momilk.cinnamon_stick_bale": "Cinnamon Stick Bale",
-  "block.momilk.hyphae_stick_bale": "Hyphae Stick Bale"
+  "block.momilk.hyphae_stick_bale": "Hyphae Stick Bale",
+  "item.momilk.glowing_salt.light_level": "Light Level: %s"
 }

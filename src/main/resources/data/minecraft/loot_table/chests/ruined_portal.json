@@ -216,6 +216,22 @@
         },
         {
           "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 10,
+                "min": 1
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "momilk:glowing_salt",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
           "name": "minecraft:golden_horse_armor",
           "weight": 5
         },

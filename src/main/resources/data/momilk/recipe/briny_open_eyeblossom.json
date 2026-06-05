@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:salt",
+    "minecraft:open_eyeblossom"
+  ],
+  "result": {
+    "id": "momilk:briny_open_eyeblossom",
+    "count": 1
+  }
+}

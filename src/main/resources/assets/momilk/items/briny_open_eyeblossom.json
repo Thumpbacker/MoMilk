@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/open_eyeblossom"
+    "model": "momilk:item/briny_open_eyeblossom"
   }
 }

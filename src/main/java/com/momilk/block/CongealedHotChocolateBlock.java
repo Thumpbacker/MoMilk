@@ -10,8 +10,8 @@ import net.minecraft.world.level.block.state.BlockState;
 public class CongealedHotChocolateBlock extends CongealedEdibleBlock {
 
 
-    public CongealedHotChocolateBlock(Properties properties, Block blockToChangeInto) {
-        super(properties, blockToChangeInto);
+    public CongealedHotChocolateBlock(Properties properties, Block blockToChangeInto, int food, float saturation) {
+        super(properties, blockToChangeInto, food, saturation);
     }
 
     @Override

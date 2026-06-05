@@ -44,7 +44,6 @@ public class UseEntityCallbackEvents {
             if (entity instanceof LivingEntity livingEntity && !livingEntity.isBaby() && livingEntity.is(ModTags.EntityTypes.MILKABLE)) {
 
                 ItemStack itemUsed = player.getItemInHand(hand);
-                MoMilk.LOGGER.info(getLootTable(livingEntity).toString());
                 ItemStack itemFromInteraction = getItemFromInteraction(livingEntity, world, itemUsed, getLootTable(livingEntity));
                 if(!itemUsed.is(ModTags.Items.MILKING_TOOLS))
                 {

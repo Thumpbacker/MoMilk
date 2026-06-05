@@ -13,11 +13,18 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:glowing_salt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "get_salt"
+      "get_salt",
+      "has_the_recipe"
     ]
   ],
   "rewards": {

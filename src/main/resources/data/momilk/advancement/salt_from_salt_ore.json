@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "have_milk": {
+    "have_ore": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -12,11 +12,18 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:salt_from_salt_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "have_milk"
+      "have_ore",
+      "has_the_recipe"
     ]
   ],
   "rewards": {

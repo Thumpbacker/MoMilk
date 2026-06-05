@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/fire_coral"
+    "model": "momilk:item/briny_fire_coral"
   }
 }

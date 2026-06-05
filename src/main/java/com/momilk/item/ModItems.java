@@ -1,6 +1,7 @@
 package com.momilk.item;
 
 import com.momilk.MoMilk;
+import com.momilk.block.GlowingSaltLayerBlock;
 import com.momilk.block.ModBlocks;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
@@ -13,9 +14,11 @@ import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.world.item.component.BlockItemStateProperties;
 import net.minecraft.world.item.component.Consumables;
 import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CopperGolemStatueBlock;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -40,7 +43,7 @@ public class ModItems {
     public static final Item SALT = register("salt", createSaltItemWithCustomItemName(ModBlocks.SALT_LAYER), new Item.Properties().food(ModFoods.SALT, ModConsumables.SALT));
     public static final Item FLOATING_SALT = register("floating_salt", createBlockItemWithCustomItemName(ModBlocks.FLOATING_SALT_LAYER), new Item.Properties());
     public static final Item REJUVENATING_SALT = register("rejuvenating_salt", createBlockItemWithCustomItemName(ModBlocks.REJUVENATING_SALT_LAYER), new Item.Properties());
-    public static final Item GLOWING_SALT = register("glowing_salt", createBlockItemWithCustomItemName(ModBlocks.GLOWING_SALT_LAYER), new Item.Properties());
+    public static final Item GLOWING_SALT = register("glowing_salt", createGlowingSaltItemWithCustomItemName(ModBlocks.GLOWING_SALT_LAYER), new Item.Properties().component(DataComponents.BLOCK_STATE, BlockItemStateProperties.EMPTY.with(GlowingSaltLayerBlock.LEVEL, 15)));
     public static final Item BRINY_TUBE_CORAL_FAN = register("briny_tube_coral_fan", createWallBlockItem(ModBlocks.BRINY_TUBE_CORAL_FAN, ModBlocks.BRINY_TUBE_CORAL_WALL_FAN), new Item.Properties());
     public static final Item BRINY_BUBBLE_CORAL_FAN = register("briny_bubble_coral_fan", createWallBlockItem(ModBlocks.BRINY_BUBBLE_CORAL_FAN, ModBlocks.BRINY_BUBBLE_CORAL_WALL_FAN), new Item.Properties());
     public static final Item BRINY_HORN_CORAL_FAN = register("briny_horn_coral_fan", createWallBlockItem(ModBlocks.BRINY_HORN_CORAL_FAN, ModBlocks.BRINY_HORN_CORAL_WALL_FAN), new Item.Properties());
@@ -94,6 +97,10 @@ public class ModItems {
 
     private static Function<Item.Properties, Item> createBlockItemWithCustomItemName(final Block block) {
         return p -> new BlockItem(block, p.useItemDescriptionPrefix());
+    }
+
+    private static Function<Item.Properties, Item> createGlowingSaltItemWithCustomItemName(final Block block) {
+        return p -> new GlowingSaltItem(block, p.useItemDescriptionPrefix());
     }
 
     private static Function<Item.Properties, Item> createSaltItemWithCustomItemName(final Block block) {

@@ -82,7 +82,7 @@ public class CheeseBlock extends HorizontalDirectionalBlock {
     @Override
     protected InteractionResult useItemOn(ItemStack itemStack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
 
-        if(itemStack.is(Items.GOLDEN_DANDELION))
+        if(itemStack.is(Items.GOLDEN_DANDELION) && state.getValue(AGE) < 5)
         {
             var canAge = state.getValue(CHEESE_AGES);
             level.setBlock(pos, state.setValue(CHEESE_AGES, !canAge), 3);

@@ -3,7 +3,11 @@
 	"package": "com.momilk.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+		"BrushItemMixin",
+		"WallBlockMixin",
+		"IronBarsBlockMixin",
+		"FenceGateBlockMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -14,6 +14,10 @@ public class ModTags {
     public static class Blocks{ ;
         public static final TagKey<Block> CONGEALED_MILKS = createTag("congealed_milks");
         public static final TagKey<Block> NON_STONE_LIKE_WALLS = createTag("non_stone_like_walls");
+        public static final TagKey<Block> STRIP_FOR_CINNAMON_STICKS = createTag("strip_for_cinnamon_sticks");
+        public static final TagKey<Block> STRIP_FOR_HYPHAE_STICKS = createTag("strip_for_hyphae_sticks");
+        public static final TagKey<Block> STRIP_FOR_BAMBOO = createTag("strip_for_bamboo");
+        public static final TagKey<Block> PREVENTS_DEPOWERING_REDSTONE_SALT_LAMPS = createTag("prevents_depowering_redstone_salt_lamps");
 
         private static TagKey<Block> createTag(String name)
         {
@@ -35,6 +39,8 @@ public class ModTags {
         public static final TagKey<Item> CONGEALED_MILKS = createTag("congealed_milks");
         public static final TagKey<Item> NON_STONE_LIKE_WALLS = createTag("non_stone_like_walls");
         public static final TagKey<Item> MILKING_TOOLS = createTag("milking_tools");
+        public static final TagKey<Item> INCREASES_GLOWING_SALT_LIGHT_LEVEL = createTag("increases_glowing_salt_light_level");
+        public static final TagKey<Item> DECREASES_GLOWING_SALT_LIGHT_LEVEL = createTag("decreases_glowing_salt_light_level");
 
         private static TagKey<Item> createTag(String name)
         {

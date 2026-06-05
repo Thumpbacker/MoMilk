@@ -11,6 +11,7 @@ import net.minecraft.core.dispenser.DefaultDispenseItemBehavior;
 import net.minecraft.core.dispenser.OptionalDispenseItemBehavior;
 import net.minecraft.core.dispenser.ShulkerBoxDispenseBehavior;
 import net.minecraft.core.particles.DustParticleOptions;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -61,7 +62,7 @@ public class DispenserModRegistry {
                     .build()
     );
 
-    static Supplier<BiMap<Block, Block>> SALTED_BLOCKS = Suppliers.memoize(
+    static Supplier<BiMap<Block, Block>> CIDER_TRANSFORM_BLOCKS = Suppliers.memoize(
             () -> ImmutableBiMap.<Block, Block>builder()
                     .put(ModBlocks.BRINY_TUBE_CORAL_BLOCK, Blocks.TUBE_CORAL_BLOCK)
                     .put(ModBlocks.BRINY_FIRE_CORAL_BLOCK, Blocks.FIRE_CORAL_BLOCK)
@@ -87,6 +88,13 @@ public class DispenserModRegistry {
                     .put(ModBlocks.BRINY_OPEN_EYEBLOSSOM, Blocks.OPEN_EYEBLOSSOM)
                     .put(ModBlocks.POTTED_BRINY_CLOSED_EYEBLOSSOM, Blocks.POTTED_CLOSED_EYEBLOSSOM)
                     .put(ModBlocks.POTTED_BRINY_OPEN_EYEBLOSSOM, Blocks.POTTED_OPEN_EYEBLOSSOM)
+                    .put(Blocks.INFESTED_COBBLESTONE, Blocks.COBBLESTONE)
+                    .put(Blocks.INFESTED_DEEPSLATE, Blocks.DEEPSLATE)
+                    .put(Blocks.INFESTED_STONE, Blocks.STONE)
+                    .put(Blocks.INFESTED_STONE_BRICKS, Blocks.STONE_BRICKS)
+                    .put(Blocks.INFESTED_CHISELED_STONE_BRICKS, Blocks.CHISELED_STONE_BRICKS)
+                    .put(Blocks.INFESTED_CRACKED_STONE_BRICKS, Blocks.CRACKED_STONE_BRICKS)
+                    .put(Blocks.INFESTED_MOSSY_STONE_BRICKS, Blocks.MOSSY_STONE_BRICKS)
                     .build()
     );
 
@@ -194,12 +202,11 @@ public class DispenserModRegistry {
                         ServerLevel level = source.level();
                         BlockPos target = source.pos().relative(source.state().getValue(DispenserBlock.FACING));
                         BlockState state = level.getBlockState(target);
-                        if (SALTED_BLOCKS.get().containsKey(state.getBlock()))
+                        if (CIDER_TRANSFORM_BLOCKS.get().containsKey(state.getBlock()))
                         {
-                            level.setBlockAndUpdate(target, SALTED_BLOCKS.get().get(state.getBlock()).withPropertiesOf(state));
+                            level.setBlockAndUpdate(target, CIDER_TRANSFORM_BLOCKS.get().get(state.getBlock()).withPropertiesOf(state));
                             level.playSound(null, target, SoundEvents.GENERIC_SPLASH, SoundSource.BLOCKS);
-                            DustParticleOptions dpo = new DustParticleOptions(Color.pink.getRGB(), 3f);
-                            level.addParticle(dpo, target.getX(), target.getY(), target.getZ(), 0, 0, 0);
+                            level.sendParticles(ParticleTypes.SPLASH, target.getX() + level.getRandom().nextDouble(), target.getY() + 1, target.getZ() + level.getRandom().nextDouble(), 1, 0.0, 0.0, 0.0, 1.0);
                             this.setSuccess(true);
                             return consumeWithRemainder(source, dispensed, new ItemStack(Items.GLASS_BOTTLE));
                         }

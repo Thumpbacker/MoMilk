@@ -1,9 +1,8 @@
-package com.momilk.mixin.client;
+package com.momilk.mixin;
 
 import com.momilk.util.ModTags;
 import net.minecraft.core.Direction;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.block.IronBarsBlock;

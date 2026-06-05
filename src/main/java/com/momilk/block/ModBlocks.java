@@ -9,11 +9,12 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.ColorRGBA;
 import net.minecraft.util.valueproviders.UniformInt;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -24,27 +25,27 @@ import java.util.function.ToIntFunction;
 
 public class ModBlocks {
 
-    public static final Block LARGE_SALT_BLOCK = register("large_salt_block", p -> new ColoredFallingBlock(new ColorRGBA(-Color.pink.getRGB()), p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).strength(0.5F), true);
-    public static final Block MEDIUM_SALT_BLOCK = register("medium_salt_block", p -> new SaltBlock(new ColorRGBA(-Color.pink.getRGB()), Block.column(14.0, 0.0, 14.0), LARGE_SALT_BLOCK, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).randomTicks().strength(0.5F), true);
-    public static final Block SALT_BLOCK = register("salt_block", p -> new SaltBlock(new ColorRGBA(Color.pink.getRGB()), Block.column(8.0, 0.0, 8.0), MEDIUM_SALT_BLOCK, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).strength(0.5F).randomTicks(), true);
+    public static final Block LARGE_SALT_BLOCK = register("large_salt_block", p -> new BaseSaltBlock(new ColorRGBA(-Color.pink.getRGB()), 16, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).strength(0.5F), true);
+    public static final Block MEDIUM_SALT_BLOCK = register("medium_salt_block", p -> new WaterloggedSaltBlock(new ColorRGBA(-Color.pink.getRGB()), 7, p, Block.column(14.0, 0.0, 14.0), LARGE_SALT_BLOCK), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).randomTicks().strength(0.5F), true);
+    public static final Block SALT_BLOCK = register("salt_block", p -> new WaterloggedSaltBlock(new ColorRGBA(Color.pink.getRGB()), 8, p, Block.column(8.0, 0.0, 8.0), MEDIUM_SALT_BLOCK), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).strength(0.5F).randomTicks(), true);
     public static final Block SALT_ORE = register("salt_ore", p -> new DropExperienceBlock(UniformInt.of(0, 2), p), BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(3.0F, 3.0F), true);
     public static final Block DEEPSLATE_SALT_ORE = register("deepslate_salt_ore", p -> new DropExperienceBlock(UniformInt.of(0, 2), p), BlockBehaviour.Properties.ofFullCopy(SALT_ORE).mapColor(MapColor.DEEPSLATE).strength(4.5F, 3.0F).sound(SoundType.DEEPSLATE), true);
-    public static final Block LARGE_SALT_LAMP = register("large_salt_lamp", p -> new ColoredFallingBlock(new ColorRGBA(Color.pink.getRGB()), p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).lightLevel(statex -> 15).strength(0.5F), true);
-    public static final Block MEDIUM_SALT_LAMP = register("medium_salt_lamp", p -> new SaltBlock(new ColorRGBA(Color.pink.getRGB()), Block.column(8.0, 0.0, 8.0), LARGE_SALT_LAMP, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).randomTicks().lightLevel(statex -> 8).strength(0.5F), true);
-    public static final Block SALT_LAMP = register("salt_lamp", p -> new SaltBlock(new ColorRGBA(Color.pink.getRGB()), Block.column(8.0, 0.0, 8.0), MEDIUM_SALT_LAMP, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).randomTicks().lightLevel(statex -> 5).strength(0.5F), true);
-    public static final Block LARGE_REDSTONE_SALT_LAMP = register("large_redstone_salt_lamp", p -> new FallingPoweredBlock(p, 15), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_RED).randomTicks().lightLevel(statex -> 7).strength(0.5F), true);
-    public static final Block MEDIUM_REDSTONE_SALT_LAMP = register("medium_redstone_salt_lamp", p -> new RedstoneSaltBlock(p, 8, Block.column(14.0, 0.0, 14.0), LARGE_REDSTONE_SALT_LAMP), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_RED).randomTicks().lightLevel(statex -> 4).strength(0.5F), true);
-    public static final Block REDSTONE_SALT_LAMP = register("redstone_salt_lamp", p -> new RedstoneSaltBlock(p, 5, Block.column(8.0, 0.0, 8.0), MEDIUM_REDSTONE_SALT_LAMP), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_RED).randomTicks().lightLevel(statex -> 2).strength(0.5F), true);
-    public static final Block LARGE_SOUL_SALT_LAMP = register("large_soul_salt_lamp", p -> new ColoredFallingBlock(new ColorRGBA(Color.pink.getRGB()), p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_BLUE).lightLevel(statex -> 10).strength(0.5F), true);
-    public static final Block LARGE_COPPER_SALT_LAMP = register("large_copper_salt_lamp", p -> new ColoredFallingBlock(new ColorRGBA(Color.pink.getRGB()), p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_GREEN).lightLevel(statex -> 15).strength(0.5F), true);
-    public static final Block MEDIUM_COPPER_SALT_LAMP = register("medium_copper_salt_lamp", p -> new SaltBlock(new ColorRGBA(Color.pink.getRGB()), Block.column(14.0, 0.0, 14.0), LARGE_COPPER_SALT_LAMP, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_GREEN).randomTicks().lightLevel(statex -> 8).strength(0.5F), true);
-    public static final Block MEDIUM_SOUL_SALT_LAMP = register("medium_soul_salt_lamp", p -> new SaltBlock(new ColorRGBA(Color.pink.getRGB()), Block.column(14.0, 0.0, 14.0), LARGE_SOUL_SALT_LAMP, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_BLUE).randomTicks().lightLevel(statex -> 5).strength(0.5F), true);
-    public static final Block COPPER_SALT_LAMP = register("copper_salt_lamp", p -> new SaltBlock(new ColorRGBA(Color.pink.getRGB()), Block.column(8.0, 0.0, 8.0), MEDIUM_COPPER_SALT_LAMP, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_GREEN).randomTicks().lightLevel(statex -> 5).strength(0.5F), true);
-    public static final Block SOUL_SALT_LAMP = register("soul_salt_lamp", p -> new SaltBlock(new ColorRGBA(Color.pink.getRGB()), Block.column(8.0, 0.0, 8.0), MEDIUM_SOUL_SALT_LAMP, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_BLUE).randomTicks().lightLevel(statex -> 3).strength(0.5F), true);
+    public static final Block LARGE_SALT_LAMP = register("large_salt_lamp", p -> new BaseSaltBlock(new ColorRGBA(Color.pink.getRGB()), 15, p ), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).lightLevel(statex -> 15).strength(0.5F), true);
+    public static final Block MEDIUM_SALT_LAMP = register("medium_salt_lamp", p -> new WaterloggedSaltBlock(new ColorRGBA(Color.pink.getRGB()), 6, p, Block.column(8.0, 0.0, 8.0), LARGE_SALT_LAMP), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).randomTicks().lightLevel(statex -> 8).strength(0.5F), true);
+    public static final Block SALT_LAMP = register("salt_lamp", p -> new WaterloggedSaltBlock(new ColorRGBA(Color.pink.getRGB()), 9, p, Block.column(8.0, 0.0, 8.0), MEDIUM_SALT_LAMP), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_PINK).randomTicks().lightLevel(statex -> 5).strength(0.5F), true);
+    public static final Block LARGE_REDSTONE_SALT_LAMP = register("large_redstone_salt_lamp", p -> new BaseRedstoneSaltBlock(p, 15, 16), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_RED).randomTicks().lightLevel(litBlockEmission(7)).isRedstoneConductor(Blocks::never).strength(0.5F), true);
+    public static final Block MEDIUM_REDSTONE_SALT_LAMP = register("medium_redstone_salt_lamp", p -> new WaterloggedRedstoneSaltBlock(p, 8, Block.column(14.0, 0.0, 14.0), LARGE_REDSTONE_SALT_LAMP, 7), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_RED).randomTicks().isRedstoneConductor(Blocks::never).lightLevel(litBlockEmission(4)).strength(0.5F), true);
+    public static final Block REDSTONE_SALT_LAMP = register("redstone_salt_lamp", p -> new WaterloggedRedstoneSaltBlock(p, 5, Block.column(8.0, 0.0, 8.0), MEDIUM_REDSTONE_SALT_LAMP, 9), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_RED).randomTicks().isRedstoneConductor(Blocks::never).lightLevel(litBlockEmission(2)).strength(0.5F), true);
+    public static final Block LARGE_SOUL_SALT_LAMP = register("large_soul_salt_lamp", p -> new BaseSaltBlock(new ColorRGBA(Color.pink.getRGB()), 16, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_BLUE).lightLevel(statex -> 10).strength(0.5F), true);
+    public static final Block LARGE_COPPER_SALT_LAMP = register("large_copper_salt_lamp", p -> new BaseSaltBlock(new ColorRGBA(Color.pink.getRGB()), 16, p), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_GREEN).lightLevel(statex -> 15).strength(0.5F), true);
+    public static final Block MEDIUM_COPPER_SALT_LAMP = register("medium_copper_salt_lamp", p -> new WaterloggedSaltBlock(new ColorRGBA(Color.pink.getRGB()), 7, p, Block.column(14.0, 0.0, 14.0), LARGE_COPPER_SALT_LAMP), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_GREEN).randomTicks().lightLevel(statex -> 8).strength(0.5F), true);
+    public static final Block MEDIUM_SOUL_SALT_LAMP = register("medium_soul_salt_lamp", p -> new WaterloggedSaltBlock(new ColorRGBA(Color.pink.getRGB()), 7, p, Block.column(14.0, 0.0, 14.0), LARGE_SOUL_SALT_LAMP), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_BLUE).randomTicks().lightLevel(statex -> 5).strength(0.5F), true);
+    public static final Block COPPER_SALT_LAMP = register("copper_salt_lamp", p -> new WaterloggedSaltBlock(new ColorRGBA(Color.pink.getRGB()), 9, p, Block.column(8.0, 0.0, 8.0), MEDIUM_COPPER_SALT_LAMP), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_GREEN).randomTicks().lightLevel(statex -> 5).strength(0.5F), true);
+    public static final Block SOUL_SALT_LAMP = register("soul_salt_lamp", p -> new WaterloggedSaltBlock(new ColorRGBA(Color.pink.getRGB()), 9, p, Block.column(8.0, 0.0, 8.0), MEDIUM_SOUL_SALT_LAMP), BlockBehaviour.Properties.of().sound(SoundType.SAND).mapColor(MapColor.COLOR_LIGHT_BLUE).randomTicks().lightLevel(statex -> 3).strength(0.5F), true);
     public static final Block SALT_LAYER = register("salt_layer", p -> new SaltLayerBlock(p, false, true), BlockBehaviour.Properties.of().sound(SoundType.SAND).instabreak().noCollision().pushReaction(PushReaction.DESTROY), false);
     public static final Block FLOATING_SALT_LAYER = register("floating_salt_layer", p -> new SaltLayerBlock(p, true, true), BlockBehaviour.Properties.of().sound(SoundType.SAND).instabreak().noCollision().pushReaction(PushReaction.DESTROY), false);
     public static final Block REJUVENATING_SALT_LAYER = register("rejuvenating_salt_layer", p -> new SaltLayerBlock(p, false, false), BlockBehaviour.Properties.of().sound(SoundType.SAND).instabreak().noCollision().pushReaction(PushReaction.DESTROY), false);
-    public static final Block GLOWING_SALT_LAYER = register("glowing_salt_layer", p -> new SaltLayerBlock(p, false, false), BlockBehaviour.Properties.of().sound(SoundType.SAND).instabreak().noCollision().pushReaction(PushReaction.DESTROY).lightLevel(statex -> 15), false);
+    public static final Block GLOWING_SALT_LAYER = register("glowing_salt_layer", p -> new GlowingSaltLayerBlock(p, false, false), BlockBehaviour.Properties.of().sound(SoundType.SAND).instabreak().noCollision().pushReaction(PushReaction.DESTROY).lightLevel(GlowingSaltLayerBlock.LIGHT_EMISSION), false);
     public static final Block CHEESE = register("cheese", CheeseBlock::new, BlockBehaviour.Properties.of().sound(SoundType.WOOL).randomTicks(), true);
     public static final Block BRINY_TUBE_CORAL_BLOCK = register("briny_tube_coral_block", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.TUBE_CORAL_BLOCK), true);
     public static final Block BRINY_BRAIN_CORAL_BLOCK = register("briny_brain_coral_block", Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BRAIN_CORAL_BLOCK), true);
@@ -80,9 +81,9 @@ public class ModBlocks {
     public static final Block CONGEALED_CHOCOLATE_MILK = register("congealed_chocolate_milk", CongealedMilkBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.COLOR_BROWN), true);
     public static final Block CONGEALED_HOG_MILK = register("congealed_hog_milk", CongealedMilkBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.TERRACOTTA_PINK), true);
     public static final Block CONGEALED_SPOILED_HOG_MILK = register("congealed_spoiled_hog_milk", CongealedMilkBlock::new, BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.COLOR_RED), true);
-    public static final Block CONGEALED_CEREAL = register("congealed_cereal", p -> new CongealedEdibleBlock(p, ModBlocks.CONGEALED_MILK), BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.WOOL), true);
-    public static final Block CONGEALED_HOT_CHOCOLATE = register("congealed_hot_chocolate", p -> new CongealedHotChocolateBlock(p, ModBlocks.CONGEALED_CHOCOLATE_MILK), BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.COLOR_BROWN), true);
-    public static final Block CONGEALED_SPOILED_CEREAL = register("congealed_spoiled_cereal", p -> new CongealedEdibleBlock(p, ModBlocks.CONGEALED_SPOILED_MILK), BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.TERRACOTTA_YELLOW), true);
+    public static final Block CONGEALED_CEREAL = register("congealed_cereal", p -> new CongealedEdibleBlock(p, ModBlocks.CONGEALED_MILK, 6, 0.2F), BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.WOOL), true);
+    public static final Block CONGEALED_HOT_CHOCOLATE = register("congealed_hot_chocolate", p -> new CongealedHotChocolateBlock(p, ModBlocks.CONGEALED_CHOCOLATE_MILK, 6, 0.2F), BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.COLOR_BROWN), true);
+    public static final Block CONGEALED_SPOILED_CEREAL = register("congealed_spoiled_cereal", p -> new CongealedEdibleBlock(p, ModBlocks.CONGEALED_SPOILED_MILK, -6, -0.2F), BlockBehaviour.Properties.ofFullCopy(Blocks.MUD).mapColor(MapColor.TERRACOTTA_YELLOW), true);
     public static final Block CINNAMON_STICK_BALE = register("cinnamon_stick_bale", RotatedPillarBlock::new, BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BROWN).sound(SoundType.WOOD).ignitedByLava().strength(2.0F), true);
     public static final Block HYPHAE_STICK_BALE = register("hyphae_stick_bale", RotatedPillarBlock::new, BlockBehaviour.Properties.of().mapColor(MapColor.CRIMSON_NYLIUM).sound(SoundType.WOOD).strength(2.0F), true);
 
@@ -121,6 +122,10 @@ public class ModBlocks {
         }
 
         return wallProperties;
+    }
+
+    public static ToIntFunction<BlockState> litBlockEmission(final int lightEmission) {
+        return state -> state.getValue(BlockStateProperties.LIT) ? lightEmission : 0;
     }
 
     public static void initialize() {}

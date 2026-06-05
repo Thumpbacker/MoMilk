@@ -1,5 +1,7 @@
 package com.momilk.block;
 
+import com.momilk.MoMilk;
+import com.momilk.util.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -13,25 +15,35 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Fallable;
 import net.minecraft.world.level.block.PoweredBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.redstone.ExperimentalRedstoneUtils;
+import net.minecraft.world.level.redstone.Orientation;
+import org.jspecify.annotations.Nullable;
 
 public class FallingPoweredBlock extends PoweredBlock implements Fallable {
-    private final int power;
+    protected static final IntegerProperty POWER = BlockStateProperties.POWER;
+    protected static final BooleanProperty LIT = BlockStateProperties.LIT;
 
     public FallingPoweredBlock(Properties properties, int power) {
         super(properties);
-        this.power = power;
+        this.registerDefaultState(this.stateDefinition.any().setValue(POWER, power).setValue(LIT, true));
     }
 
     @Override
     protected int getSignal(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
-        return power;
+        return state.getValue(POWER);
     }
 
     @Override
     protected void onPlace(final BlockState state, final Level level, final BlockPos pos, final BlockState oldState, final boolean movedByPiston) {
+        this.notifyNeighbors(level, pos, state);
         level.scheduleTick(pos, this, this.getDelayAfterPlace());
     }
 
@@ -51,10 +63,55 @@ public class FallingPoweredBlock extends PoweredBlock implements Fallable {
     }
 
     @Override
+    protected boolean isSignalSource(final BlockState state) {
+        return true;
+    }
+
+    @Override
+    protected void neighborChanged(final BlockState state, final Level level, final BlockPos pos, final Block block, @Nullable final Orientation orientation, final boolean movedByPiston) {
+        if ((Boolean)state.getValue(LIT) == this.hasNeighborSignal(level, pos) && !level.getBlockTicks().willTickThisTick(pos, this)) {
+            level.scheduleTick(pos, this, 2);
+        }
+    }
+
+    private void notifyNeighbors(final Level level, final BlockPos pos, final BlockState state) {
+        Orientation orientation = this.randomOrientation(level, state);
+
+        for (Direction direction : Direction.values()) {
+            level.updateNeighborsAt(pos.relative(direction), this, ExperimentalRedstoneUtils.withFront(orientation, direction));
+        }
+    }
+
+    @Nullable
+    protected Orientation randomOrientation(final Level level, final BlockState state) {
+        return ExperimentalRedstoneUtils.initialOrientation(level, null, Direction.UP);
+    }
+
+    @Override
+    protected void affectNeighborsAfterRemoval(final BlockState state, final ServerLevel level, final BlockPos pos, final boolean movedByPiston) {
+        if (!movedByPiston) {
+            this.notifyNeighbors(level, pos, state);
+        }
+    }
+
+    protected boolean hasNeighborSignal(final Level level, final BlockPos pos) {
+        return false;
+    }
+
+    private int getNewPowerState(final Level level, final BlockPos pos)
+    {
+        return !hasNeighborSignal(level, pos) ? this.defaultBlockState().getValue(POWER) : 0;
+    }
+
+    @Override
     protected void tick(final BlockState state, final ServerLevel level, final BlockPos pos, final RandomSource random) {
         if (isFree(level.getBlockState(pos.below())) && pos.getY() >= level.getMinY()) {
             FallingBlockEntity entity = FallingBlockEntity.fall(level, pos, state);
             this.falling(entity);
+        }
+        else
+        {
+            level.setBlock(pos, state.setValue(LIT, !hasNeighborSignal(level, pos)).setValue(POWER, getNewPowerState(level, pos)), 3);
         }
     }
 

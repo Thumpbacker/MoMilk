@@ -3,7 +3,7 @@ package com.momilk.effects;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 
@@ -27,7 +27,6 @@ public class DrowningEffect extends MobEffect {
     // Called when the effect is applied.
     @Override
     public boolean applyEffectTick(ServerLevel level, LivingEntity entity, int amplifier) {
-
         if(entity.isUnderWater())
         {
             AttributeInstance respiration = entity.getAttribute(Attributes.OXYGEN_BONUS);

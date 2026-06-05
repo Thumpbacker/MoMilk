@@ -12,17 +12,23 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:spoiled_hog_arrow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "have_milk"
+      "have_milk",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "momilk:spoiled_hog_milk_arrow",
-      "momilk:spoiled_hog_milk_arrow_from_smelting"
+      "momilk:spoiled_hog_milk_arrow"
     ]
   }
 }

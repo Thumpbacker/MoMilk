@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:salt",
+    "minecraft:tube_coral"
+  ],
+  "result": {
+    "id": "momilk:briny_tube_coral",
+    "count": 1
+  }
+}

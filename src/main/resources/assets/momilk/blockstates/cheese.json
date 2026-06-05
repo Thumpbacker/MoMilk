@@ -1,170 +1,338 @@
 {
   "variants": {
-    "cheese_bites=0,age=0": {
+    "cheese_bites=0,age=0,cheese_ages=false": {
       "model": "momilk:block/cheese"
     },
-    "cheese_bites=1,age=0": {
+    "cheese_bites=1,age=0,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1"
     },
-    "cheese_bites=2,age=0": {
+    "cheese_bites=2,age=0,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2"
     },
-    "cheese_bites=3,age=0": {
+    "cheese_bites=3,age=0,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3"
     },
-    "facing=south,cheese_bites=1,age=0": {
+    "facing=south,cheese_bites=1,age=0,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1",
       "y": 90
     },
-    "facing=west,cheese_bites=1,age=0": {
+    "facing=west,cheese_bites=1,age=0,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1",
       "y": 180
     },
-    "facing=west,cheese_bites=2,age=0": {
+    "facing=west,cheese_bites=2,age=0,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2",
       "y": 180
     },
-    "facing=west,cheese_bites=3,age=0": {
+    "facing=west,cheese_bites=3,age=0,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3",
       "y": 180
     },
-    "cheese_bites=0,age=1": {
+    "cheese_bites=0,age=1,cheese_ages=false": {
       "model": "momilk:block/cheese_age_1"
     },
-    "cheese_bites=1,age=1": {
+    "cheese_bites=1,age=1,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_1"
     },
-    "cheese_bites=2,age=1": {
+    "cheese_bites=2,age=1,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_1"
     },
-    "cheese_bites=3,age=1": {
+    "cheese_bites=3,age=1,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_1"
     },
-    "facing=south,cheese_bites=1,age=1": {
+    "facing=south,cheese_bites=1,age=1,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_1",
       "y": 90
     },
-    "facing=west,cheese_bites=1,age=1": {
+    "facing=west,cheese_bites=1,age=1,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_1",
       "y": 180
     },
-    "facing=west,cheese_bites=2,age=1": {
+    "facing=west,cheese_bites=2,age=1,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_1",
       "y": 180
     },
-    "facing=west,cheese_bites=3,age=1": {
+    "facing=west,cheese_bites=3,age=1,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_1",
       "y": 180
     },
-    "cheese_bites=0,age=2": {
+    "cheese_bites=0,age=2,cheese_ages=false": {
       "model": "momilk:block/cheese_age_2"
     },
-    "cheese_bites=1,age=2": {
+    "cheese_bites=1,age=2,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_2"
     },
-    "cheese_bites=2,age=2": {
+    "cheese_bites=2,age=2,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_2"
     },
-    "cheese_bites=3,age=2": {
+    "cheese_bites=3,age=2,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_2"
     },
-    "facing=south,cheese_bites=1,age=2": {
+    "facing=south,cheese_bites=1,age=2,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_2",
       "y": 90
     },
-    "facing=west,cheese_bites=1,age=2": {
+    "facing=west,cheese_bites=1,age=2,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_2",
       "y": 180
     },
-    "facing=west,cheese_bites=2,age=2": {
+    "facing=west,cheese_bites=2,age=2,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_2",
       "y": 180
     },
-    "facing=west,cheese_bites=3,age=2": {
+    "facing=west,cheese_bites=3,age=2,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_2",
       "y": 180
     },
-    "cheese_bites=0,age=3": {
+    "cheese_bites=0,age=3,cheese_ages=false": {
       "model": "momilk:block/cheese_age_3"
     },
-    "cheese_bites=1,age=3": {
+    "cheese_bites=1,age=3,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_3"
     },
-    "cheese_bites=2,age=3": {
+    "cheese_bites=2,age=3,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_3"
     },
-    "cheese_bites=3,age=3": {
+    "cheese_bites=3,age=3,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_3"
     },
-    "facing=south,cheese_bites=1,age=3": {
+    "facing=south,cheese_bites=1,age=3,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_3",
       "y": 90
     },
-    "facing=west,cheese_bites=1,age=3": {
+    "facing=west,cheese_bites=1,age=3,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_3",
       "y": 180
     },
-    "facing=west,cheese_bites=2,age=3": {
+    "facing=west,cheese_bites=2,age=3,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_3",
       "y": 180
     },
-    "facing=west,cheese_bites=3,age=3": {
+    "facing=west,cheese_bites=3,age=3,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_3",
       "y": 180
     },
-    "cheese_bites=0,age=4": {
+    "cheese_bites=0,age=4,cheese_ages=false": {
       "model": "momilk:block/cheese_age_4"
     },
-    "cheese_bites=1,age=4": {
+    "cheese_bites=1,age=4,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_4"
     },
-    "cheese_bites=2,age=4": {
+    "cheese_bites=2,age=4,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_4"
     },
-    "cheese_bites=3,age=4": {
+    "cheese_bites=3,age=4,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_4"
     },
-    "facing=south,cheese_bites=1,age=4": {
+    "facing=south,cheese_bites=1,age=4,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_4",
       "y": 90
     },
-    "facing=west,cheese_bites=1,age=4": {
+    "facing=west,cheese_bites=1,age=4,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_4",
       "y": 180
     },
-    "facing=west,cheese_bites=2,age=4": {
+    "facing=west,cheese_bites=2,age=4,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_4",
       "y": 180
     },
-    "facing=west,cheese_bites=3,age=4": {
+    "facing=west,cheese_bites=3,age=4,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_4",
       "y": 180
     },
-    "cheese_bites=0,age=5": {
+    "cheese_bites=0,age=5,cheese_ages=false": {
       "model": "momilk:block/cheese_age_5"
     },
-    "cheese_bites=1,age=5": {
+    "cheese_bites=1,age=5,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_5"
     },
-    "cheese_bites=2,age=5": {
+    "cheese_bites=2,age=5,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_5"
     },
-    "cheese_bites=3,age=5": {
+    "cheese_bites=3,age=5,cheese_ages=false": {
       "model": "momilk:block/cheese_bite3_age_5"
     },
-    "facing=south,cheese_bites=1,age=5": {
+    "facing=south,cheese_bites=1,age=5,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_5",
       "y": 90
     },
-    "facing=west,cheese_bites=1,age=5": {
+    "facing=west,cheese_bites=1,age=5,cheese_ages=false": {
       "model": "momilk:block/cheese_bite1_age_5",
       "y": 180
     },
-    "facing=west,cheese_bites=2,age=5": {
+    "facing=west,cheese_bites=2,age=5,cheese_ages=false": {
       "model": "momilk:block/cheese_bite2_age_5",
       "y": 180
     },
-    "facing=west,cheese_bites=3,age=5": {
+    "facing=west,cheese_bites=3,age=5,cheese_ages=false": {
+      "model": "momilk:block/cheese_bite3_age_5",
+      "y": 180
+    },
+    "cheese_bites=0,age=0,cheese_ages=true": {
+      "model": "momilk:block/cheese"
+    },
+    "cheese_bites=1,age=0,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1"
+    },
+    "cheese_bites=2,age=0,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2"
+    },
+    "cheese_bites=3,age=0,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3"
+    },
+    "facing=south,cheese_bites=1,age=0,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1",
+      "y": 90
+    },
+    "facing=west,cheese_bites=1,age=0,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1",
+      "y": 180
+    },
+    "facing=west,cheese_bites=2,age=0,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2",
+      "y": 180
+    },
+    "facing=west,cheese_bites=3,age=0,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3",
+      "y": 180
+    },
+    "cheese_bites=0,age=1,cheese_ages=true": {
+      "model": "momilk:block/cheese_age_1"
+    },
+    "cheese_bites=1,age=1,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_1"
+    },
+    "cheese_bites=2,age=1,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_1"
+    },
+    "cheese_bites=3,age=1,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_1"
+    },
+    "facing=south,cheese_bites=1,age=1,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_1",
+      "y": 90
+    },
+    "facing=west,cheese_bites=1,age=1,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_1",
+      "y": 180
+    },
+    "facing=west,cheese_bites=2,age=1,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_1",
+      "y": 180
+    },
+    "facing=west,cheese_bites=3,age=1,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_1",
+      "y": 180
+    },
+    "cheese_bites=0,age=2,cheese_ages=true": {
+      "model": "momilk:block/cheese_age_2"
+    },
+    "cheese_bites=1,age=2,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_2"
+    },
+    "cheese_bites=2,age=2,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_2"
+    },
+    "cheese_bites=3,age=2,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_2"
+    },
+    "facing=south,cheese_bites=1,age=2,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_2",
+      "y": 90
+    },
+    "facing=west,cheese_bites=1,age=2,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_2",
+      "y": 180
+    },
+    "facing=west,cheese_bites=2,age=2,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_2",
+      "y": 180
+    },
+    "facing=west,cheese_bites=3,age=2,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_2",
+      "y": 180
+    },
+    "cheese_bites=0,age=3,cheese_ages=true": {
+      "model": "momilk:block/cheese_age_3"
+    },
+    "cheese_bites=1,age=3,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_3"
+    },
+    "cheese_bites=2,age=3,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_3"
+    },
+    "cheese_bites=3,age=3,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_3"
+    },
+    "facing=south,cheese_bites=1,age=3,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_3",
+      "y": 90
+    },
+    "facing=west,cheese_bites=1,age=3,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_3",
+      "y": 180
+    },
+    "facing=west,cheese_bites=2,age=3,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_3",
+      "y": 180
+    },
+    "facing=west,cheese_bites=3,age=3,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_3",
+      "y": 180
+    },
+    "cheese_bites=0,age=4,cheese_ages=true": {
+      "model": "momilk:block/cheese_age_4"
+    },
+    "cheese_bites=1,age=4,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_4"
+    },
+    "cheese_bites=2,age=4,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_4"
+    },
+    "cheese_bites=3,age=4,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_4"
+    },
+    "facing=south,cheese_bites=1,age=4,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_4",
+      "y": 90
+    },
+    "facing=west,cheese_bites=1,age=4,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_4",
+      "y": 180
+    },
+    "facing=west,cheese_bites=2,age=4,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_4",
+      "y": 180
+    },
+    "facing=west,cheese_bites=3,age=4,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_4",
+      "y": 180
+    },
+    "cheese_bites=0,age=5,cheese_ages=true": {
+      "model": "momilk:block/cheese_age_5"
+    },
+    "cheese_bites=1,age=5,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_5"
+    },
+    "cheese_bites=2,age=5,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_5"
+    },
+    "cheese_bites=3,age=5,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite3_age_5"
+    },
+    "facing=south,cheese_bites=1,age=5,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_5",
+      "y": 90
+    },
+    "facing=west,cheese_bites=1,age=5,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite1_age_5",
+      "y": 180
+    },
+    "facing=west,cheese_bites=2,age=5,cheese_ages=true": {
+      "model": "momilk:block/cheese_bite2_age_5",
+      "y": 180
+    },
+    "facing=west,cheese_bites=3,age=5,cheese_ages=true": {
       "model": "momilk:block/cheese_bite3_age_5",
       "y": 180
     }

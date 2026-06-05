@@ -36,6 +36,7 @@ public class SaltLayerBlock extends FallingBlock implements SimpleWaterloggedBlo
         super(properties);
         this.floating = floating;
         this.harmful = harmful;
+        this.registerDefaultState(this.stateDefinition.any().setValue(WATERLOGGED, false));
     }
 
     @Override

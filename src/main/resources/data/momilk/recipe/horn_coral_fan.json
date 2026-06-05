@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:apple_cider",
+    "momilk:briny_horn_coral_fan"
+  ],
+  "result": {
+    "id": "minecraft:horn_coral_fan",
+    "count": 1
+  }
+}

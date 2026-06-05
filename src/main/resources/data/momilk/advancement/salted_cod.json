@@ -12,11 +12,18 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:salted_cod"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "get_salt"
+      "get_salt",
+      "has_the_recipe"
     ]
   ],
   "rewards": {

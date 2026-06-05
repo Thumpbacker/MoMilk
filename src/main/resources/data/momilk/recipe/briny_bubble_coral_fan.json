@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:salt",
+    "minecraft:bubble_coral_fan"
+  ],
+  "result": {
+    "id": "momilk:briny_bubble_coral_fan",
+    "count": 1
+  }
+}

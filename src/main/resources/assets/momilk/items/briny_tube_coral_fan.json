@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "minecraft:item/tube_coral_fan"
+    "model": "momilk:item/briny_tube_coral_fan"
   }
 }

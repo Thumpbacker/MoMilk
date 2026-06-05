@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "have_milk": {
+    "have_ingredients": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -14,11 +14,18 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:cheese"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "have_milk"
+      "have_ingredients",
+      "has_the_recipe"
     ]
   ],
   "rewards": {

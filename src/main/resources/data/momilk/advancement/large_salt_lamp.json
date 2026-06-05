@@ -12,19 +12,23 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:large_salt_lamp"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "get_salt"
+      "get_salt",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "momilk:large_salt_lamp",
-      "momilk:large_soul_salt_lamp",
-      "momilk:large_redstone_salt_lamp",
-      "momilk:large_copper_salt_lamp"
+      "momilk:large_salt_lamp"
     ]
   }
 }

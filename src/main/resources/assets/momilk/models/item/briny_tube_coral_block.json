@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "momilk:item/briny_tube_coral_block"
+  }
+}

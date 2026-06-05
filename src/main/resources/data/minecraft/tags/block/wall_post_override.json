@@ -3,6 +3,7 @@
   "values": [
     "momilk:salt_layer",
     "momilk:floating_salt_layer",
-    "momilk:rejuvenating_salt_layer"
+    "momilk:rejuvenating_salt_layer",
+    "momilk:glowing_salt_layer"
   ]
 }

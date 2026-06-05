@@ -1,7 +1,10 @@
 {
   "variants": {
-    "": {
+    "lit=true": {
       "model": "momilk:block/redstone_salt_lamp"
+    },
+    "lit=false": {
+      "model": "momilk:block/depowered_redstone_salt_lamp"
     }
   }
 }

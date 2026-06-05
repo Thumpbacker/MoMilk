@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "wax_off": {
+    "strip": {
       "conditions": {
         "location": [
           {
@@ -29,11 +29,18 @@
         ]
       },
       "trigger": "minecraft:item_used_on_block"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:spruce_log"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "wax_off"
+      "strip",
+      "has_the_recipe"
     ]
   ],
   "rewards": {

@@ -12,6 +12,12 @@ public class ModFuelItems {
         FuelValueEvents.BUILD.register((builder, context) -> {
             builder.add(ModBlocks.CINNAMON_STICK_BALE, 300);
         });
+        FuelValueEvents.BUILD.register((builder, context) -> {
+            builder.add(ModBlocks.WRAPPED_BAMBOO_BLOCK, 300);
+        });
+        FuelValueEvents.BUILD.register((builder, context) -> {
+            builder.add(ModBlocks.STRIPPED_WRAPPED_BAMBOO_BLOCK, 300);
+        });
     }
 
 }

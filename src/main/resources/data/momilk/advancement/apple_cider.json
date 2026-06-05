@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "have_milk": {
+    "has_cider": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -14,11 +14,18 @@
           }
         ]
       }
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:apple_cider"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "have_milk"
+      "has_cider",
+      "has_the_recipe"
     ]
   ],
   "rewards": {

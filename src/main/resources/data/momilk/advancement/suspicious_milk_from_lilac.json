@@ -8,11 +8,18 @@
         }
       },
       "trigger": "minecraft:effects_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "momilk:suspicious_milk_from_lilac"
+      },
+      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "all_effects"
+      "all_effects",
+      "has_the_recipe"
     ]
   ],
   "rewards": {

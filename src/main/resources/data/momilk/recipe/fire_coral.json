@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "momilk:apple_cider",
+    "momilk:briny_fire_coral"
+  ],
+  "result": {
+    "id": "minecraft:fire_coral",
+    "count": 1
+  }
+}
